@@ -1,3 +1,10 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+""" Python界面模板 """
+
+__author__ = 'Shu Xu'
+
 from PyQt5 import QtCore, QtGui, QtWidgets
 import sys
 import os
