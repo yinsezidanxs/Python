@@ -49,7 +49,9 @@ class NewMainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
     # 关闭主窗口时的动作
     def closeEvent(self, event):
-        reply = QtWidgets.QMessageBox.question(self, '提示', '确定要退出吗?', QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.No, QtWidgets.QMessageBox.No)
+        reply = QtWidgets.QMessageBox.question(self, '提示', '确定要退出吗?',
+                                               QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.No,
+                                               QtWidgets.QMessageBox.No)
         if reply == QtWidgets.QMessageBox.Yes:
             event.accept()
         else:
@@ -60,10 +62,12 @@ class NewMainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         text1 = self.value_1.text()
         text2 = self.value_2.text()
         if text1 == '' or text2 == '':
-            QtWidgets.QMessageBox.warning(self, "警告", '请正确输入。', QtWidgets.QMessageBox.Yes)
+            QtWidgets.QMessageBox.warning(self, "警告", '请正确输入。',
+                                          QtWidgets.QMessageBox.Yes,
+                                          QtWidgets.QMessageBox.Yes)
         else:
-            sum = int(text1) + int(text2)
-            self.value_sum.setText(str(sum))
+            text_sum = int(text1) + int(text2)
+            self.value_sum.setText(str(text_sum))
 
     # 进入界面1
     def _display_form1(self):
